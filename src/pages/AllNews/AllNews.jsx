@@ -21,7 +21,7 @@ const AllNews = ({ searchQuery }) => {
   }, [searchQuery]);
 
   return (
-    <div>
+    <div className="my-10 lg:my-20">
       {loading ? (
         <p className="mx-auto">Loading....</p>
       ) : searchQuery ? (

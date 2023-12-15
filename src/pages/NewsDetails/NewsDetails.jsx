@@ -15,6 +15,8 @@ const NewsDetails = () => {
       });
   }, [objectID]);
 
+  console.log(details);
+
   return (
     <div>
       {loading ? (
@@ -25,6 +27,15 @@ const NewsDetails = () => {
             <div className="card-body">
               <h2 className="card-title">{details.title}</h2>
               <p>{details.children[2].text}</p>
+              <div className="flex justify-start items-center gap-4">
+                <h4 className="">{details?.author}</h4>
+                <p>{details?.created_at}</p>
+              </div>
+              <div className="card-actions justify-start">
+                <a href={details?.url} className="btn">
+                  Reading
+                </a>
+              </div>
             </div>
           </div>
         </div>
