@@ -41,14 +41,14 @@ const AllNews = ({ searchQuery }) => {
         </div>
       ) : (
         <div className="grid lg:grid-cols-8 mx-auto gap-10">
-          <aside className="col-span-3 mx-auto">
+          <aside className="lg:col-span-3 mx-auto">
             <FeatureNews />
           </aside>
-          <div className="grid lg:col-span-5 gap-2 lg:w-full grid-cols-1 lg:grid-cols-2 mx-auto">
+          <div className="grid lg:col-span-5 gap-2 w-80 lg:w-full grid-cols-1 lg:grid-cols-2 mx-auto">
             {news.slice(0, 10).map((n) => (
               <div key={n.objectID} className="">
                 <Link to={`/news/${n.objectID}`} className="">
-                  <div className="card w-80 h-48 my-4 bg-base-100 shadow-xl">
+                  <div className="card  lg:w-80 h-48 my-4 bg-base-100 shadow-xl">
                     <div className="card-body">
                       <h2 className="card-title">{n.title}</h2>
                       <p>If a dog chews shoes whose shoes does he choose?</p>

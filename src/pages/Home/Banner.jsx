@@ -35,9 +35,9 @@ const Banner = () => {
       </div>
       <>
         <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
-          {news.map((n) => (
+          {news.slice(0, 4).map((n) => (
             <SwiperSlide key={n._id}>
-              <Link className="relative" to={`/news/${n._id}`}>
+              <Link className="relative" to={`/feature/${n._id}`}>
                 <img src={n.image} alt="" className="w-full h-80 lg:max-h-96" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black"></div>
                 <div className="absolute bottom-4 px-8 text-white">

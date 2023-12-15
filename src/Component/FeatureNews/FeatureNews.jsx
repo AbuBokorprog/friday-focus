@@ -1,6 +1,5 @@
-// import React from "react";
-
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const FeatureNews = () => {
   const [news, setNews] = useState([]);
@@ -17,7 +16,10 @@ const FeatureNews = () => {
       <h2 className="text-4xl">Feature News</h2>
       {news.map((n) => (
         <div key={n._id}>
-          <div className="card my-2 w-96 card-side bg-base-100 shadow-xl">
+          <Link
+            to={`/feature/${n._id}`}
+            className="card my-2 w-80 lg:w-96 card-side bg-base-100 shadow-xl"
+          >
             <img src={n.image} alt="Movie" className="w-32" />
             <div className="card-body">
               <h2 className="card-title">{n.title}</h2>
@@ -30,7 +32,7 @@ const FeatureNews = () => {
                 <h4 className="">{n.author_name}</h4>
               </div>
             </div>
-          </div>
+          </Link>
         </div>
       ))}
     </div>
