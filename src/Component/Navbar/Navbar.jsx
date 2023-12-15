@@ -2,7 +2,7 @@ import React from "react";
 import SearchBar from "../SearchBar/SearchBar";
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({ onSearch }) => {
   return (
     <div className="navbar bg-base-100">
       <div className="navbar-start">
@@ -27,7 +27,7 @@ const Navbar = () => {
             tabIndex={0}
             className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
           >
-            <SearchBar />
+            <SearchBar onSearch={onSearch} />
           </div>
         </div>
         <Link>
@@ -36,7 +36,7 @@ const Navbar = () => {
       </div>
       <div className="navbar-center hidden lg:flex">
         <div className="menu menu-horizontal px-1">
-          <SearchBar />
+          <SearchBar onSearch={onSearch} />
         </div>
       </div>
       <div className="navbar-end">

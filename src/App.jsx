@@ -1,12 +1,17 @@
-import React from "react";
+import { useState } from "react";
 import Navbar from "./Component/Navbar/Navbar";
-import { Outlet } from "react-router-dom";
+import AllNews from "./pages/AllNews/AllNews";
 
 const App = () => {
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const handleSearch = (query) => {
+    setSearchQuery(query);
+  };
   return (
     <div>
-      <Navbar />
-      <Outlet />
+      <Navbar onSearch={handleSearch} />
+      <AllNews searchQuery={searchQuery} />
     </div>
   );
 };
