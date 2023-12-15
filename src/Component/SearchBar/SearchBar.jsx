@@ -18,7 +18,7 @@ const SearchBar = ({ onSearch }) => {
           <input
             type="search"
             placeholder="Search Your News"
-            className="input input-bordered input-primary w-full"
+            className="input input-bordered input-primary max-w-2xl"
             value={searchQuery}
             onChange={handleInputChange}
           />

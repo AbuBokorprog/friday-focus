@@ -33,14 +33,14 @@ const Navbar = ({ onSearch }) => {
           <img src="/logo.png" alt="" className="w-36" />
         </Link>
       </div>
-      <div className="navbar-center hidden lg:flex">
+      <div className="navbar-center navbar-end hidden lg:flex">
         <div className="menu menu-horizontal px-1">
           <SearchBar onSearch={onSearch} />
         </div>
       </div>
-      <div className="navbar-end">
+      {/* <div className="navbar-end">
         <a className="btn">Button</a>
-      </div>
+      </div> */}
     </div>
   );
 };

@@ -18,7 +18,7 @@ const Banner = () => {
 
   return (
     <div className="mx-6 mb-10">
-      <div className="flex shadow-md justify-start gap-2 items-center">
+      <div className="flex mb-6 lg:mb-0 shadow-md justify-start gap-2 items-center">
         <div className="w-96">
           <h3 className="bg-primary py-2 text-center text-white lg:font-semibold">
             Headline
