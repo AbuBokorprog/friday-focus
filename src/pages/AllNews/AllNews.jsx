@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import FeatureNews from "../../Component/FeatureNews/FeatureNews";
 
 const AllNews = ({ searchQuery }) => {
   const [loading, setLoading] = useState(true);
@@ -32,14 +33,6 @@ const AllNews = ({ searchQuery }) => {
                   <div className="card-body">
                     <h2 className="card-title">{n.title}</h2>
                     <p>If a dog chews shoes whose shoes does he choose?</p>
-                    {/* <div className="card-actions justify-between">
-                      <a className="btn" href={n.url}>
-                        View
-                      </a>
-                      <Link to={`/news/${n.objectID}`} className="btn">
-                        Details
-                      </Link>
-                    </div> */}
                   </div>
                 </div>
               </Link>
@@ -47,19 +40,24 @@ const AllNews = ({ searchQuery }) => {
           ))}
         </div>
       ) : (
-        <div className="grid grid-cols-1 lg:grid-cols-3 mx-auto gap-6">
-          {news.slice(0, 10).map((n) => (
-            <div key={n.objectID}>
-              <Link to={`/news/${n.objectID}`}>
-                <div className="card w-96 h-52 bg-base-100 shadow-xl">
-                  <div className="card-body">
-                    <h2 className="card-title">{n.title}</h2>
-                    <p>If a dog chews shoes whose shoes does he choose?</p>
+        <div className="grid lg:grid-cols-8 mx-auto gap-10">
+          <aside className="col-span-3 mx-auto">
+            <FeatureNews />
+          </aside>
+          <div className="grid lg:col-span-5 gap-2 lg:w-full grid-cols-1 lg:grid-cols-2 mx-auto">
+            {news.slice(0, 10).map((n) => (
+              <div key={n.objectID} className="">
+                <Link to={`/news/${n.objectID}`} className="">
+                  <div className="card w-80 h-48 my-4 bg-base-100 shadow-xl">
+                    <div className="card-body">
+                      <h2 className="card-title">{n.title}</h2>
+                      <p>If a dog chews shoes whose shoes does he choose?</p>
+                    </div>
                   </div>
-                </div>
-              </Link>
-            </div>
-          ))}
+                </Link>
+              </div>
+            ))}
+          </div>
         </div>
       )}
     </div>

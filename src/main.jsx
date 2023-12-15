@@ -4,6 +4,7 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
 import NewsDetails from "./pages/NewsDetails/NewsDetails";
+import NewsDet from "./pages/Home/NewsDet";
 
 const router = createBrowserRouter([
   {
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
   {
     path: "/news/:objectID",
     element: <NewsDetails />,
+  },
+  {
+    path: "/news/:_id",
+    element: <NewsDet />,
   },
 ]);
 

@@ -3,6 +3,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Banner = () => {
   const [news, setNews] = useState([]);
@@ -36,7 +37,7 @@ const Banner = () => {
         <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
           {news.map((n) => (
             <SwiperSlide key={n._id}>
-              <div className="relative">
+              <Link className="relative" to={`/news/${n._id}`}>
                 <img src={n.image} alt="" className="w-full h-80 lg:max-h-96" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black"></div>
                 <div className="absolute bottom-4 px-8 text-white">
@@ -50,7 +51,7 @@ const Banner = () => {
                     <h4 className="md:text-2xl font-medium">{n.author_name}</h4>
                   </div>
                 </div>
-              </div>
+              </Link>
             </SwiperSlide>
           ))}
         </Swiper>
