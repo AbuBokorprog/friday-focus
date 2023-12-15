@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 const SearchBar = ({ onSearch }) => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -17,7 +17,7 @@ const SearchBar = ({ onSearch }) => {
         <div className="flex items-center justify-center gap-4">
           <input
             type="search"
-            placeholder="Type here"
+            placeholder="Search Your News"
             className="input input-bordered input-primary w-full"
             value={searchQuery}
             onChange={handleInputChange}
