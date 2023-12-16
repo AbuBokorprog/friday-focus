@@ -1,8 +1,28 @@
-# React + Vite
+# Friday Focus
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to Friday Focus, a newspaper-based website project that provides users with the latest news, features, and the ability to explore a diverse range of articles.
 
-Currently, two official plugins are available:
+## Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Features](#features)
+- [Usage](#usage)
+- [Technologies Used](#technologies-used)
+- [Project Structure](#project-structure)
+
+## Features
+
+1. **Banner:** Engage users with a visually appealing banner showcasing top stories or important announcements.
+
+2. **Featured News:** Highlight important or trending news articles for users to explore.
+
+3. **All News:** Browse a comprehensive list of all available news articles.
+
+4. **Search News:** Enable users to search for specific news articles based on keywords or topics of interest.
+
+5. **News Details:** View detailed information about a specific news article, including the title, image, author details, description, and creation date.
+
+## Technologies Used
+
+- **React**
+- **Tailwind**
+- **Swiper**
